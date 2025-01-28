@@ -3,59 +3,95 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>saharable link</title>
+    <title>Editable Resume</title>
     <link rel="stylesheet" href="styles.css">
+    <script src="html2pdf.js-main/html2pdf.js-main/dist/html2pdf.bundle.js"></script>
 </head>
 <body>
     <div class="container">
-        <h1>Dynamic Resume Builder</h1>
-        <form id="resumeForm">
+        <div id="resumeDisplay">
+          <header>
+            <img src="WhatsApp Image 2024-09-08 at 2.07.54 PM.jpeg" alt="Profile Picture" class="profile-pic" id="profilePic">
+            <h1 id="name" contenteditable="false">JAVERIA FATIMA</h1>
+            <p id="email" contenteditable="false">📧 Email: example@gmail.com</p>
+            <p id="phone" contenteditable="false">📞 Phone: 0000000000</p>
+        </header>
             <div class="form-section">
-                <label for="name">Name:</label>
-                <input type="text" id="name" name="name" required>
-            </div>
-
-            <div class="form-section">
-                <label for="email">Email:</label>
-                <input type="email" id="email" name="email" required>
-            </div>
-
-            <div class="form-section">
-                <label for="education">Education:</label>
-                <textarea id="education" name="education" required></textarea>
-            </div>
+                <h2 id="educationHeading" contenteditable="false">🎓 Education</h2>
+                <p id="education" contenteditable="false">your qualification</p>
+            <!-- </div> -->
 
             <div class="form-section">
-                <label for="experience">Work Experience:</label>
-                <textarea id="experience" name="experience" required></textarea>
-            </div>
-
+                <h2 id="skillsHeading" contenteditable="false">💼 Skills</h2>
+                <p id="skills" contenteditable="false">example: JavaScript, TypeScript, HTML, CSS</p>
+            <!-- </div> -->
             <div class="form-section">
-                <label for="skills">Skills:</label>
-                <textarea id="skills" name="skills" required></textarea>
+                <h2 id="workexperienceHeading" contenteditable="false">🏢 Work Experience</h2>
+                <ul id="workexperience">
+                  <li>Built an interactive resume builder</li>
+                  <li>Designed and deployed a personal portfolio on GitHub and Vercel.</li>
+                </ul>
+            <!-- </div> -->
+        
+            <div class="form-section">
+                <h2 id="projectsHeading" contenteditable="false">📊 Projects</h2>
+                <p id="projects" contenteditable="false">Resume Builder - Five different versions showcasing modern UI/UX design.</p>
+            <!-- </div> -->
+        
+            <div class="form-section">
+                <h2 id="contactHeading" contenteditable="false">🌐 Contact</h2>
+                <ul id="contact">
+                    <li> 📧 Email:  example@gmail.com</li>
+                    <li>📞 Phone: 0000000000</li>
+                    <li>🔗 LinkedIn: <a href="https://www.linkedin.com/in/javeria-fatima-5414a330b?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target="_blank">Click here</a></li>
+                </ul>
             </div>
-
-            <button type="submit">Generate Resume</button>
-        </form>
-
-        <div id="resumeContainer" class="resume">
-            <h2>Generated Resume</h2>
-            <p><strong>Name:</strong> <span id="displayName"></span></p>
-            <p><strong>Email:</strong> <span id="displayEmail"></span></p>
-            <p><strong>Education:</strong> <span id="displayEducation"></span></p>
-            <p><strong>Work Experience:</strong> <span id="displayExperience"></span></p>
-            <p><strong>Skills:</strong> <span id="displaySkills"></span></p>
-        </div>
-
+        <!-- </div> -->
+    <!-- </div> -->
+            <!-- </div> -->
+        </br>
+        <button class="actions" type="button" id="editResume">Edit Resume</button>
+        <button class="actions" type="button" id="downloadResume">Download Resume</button>
+        <button class="actions" type="button" id="shareResume">Share Resume</button>
         <div class="actions">
-            <button id="downloadHtml">Download as HTML</button>
-            <button id="shareLink">Share Resume</button>
+            <div id="sharedLinkContainer" style="display: none;">
+              <p>Share your resume with the following link:</p>
+              <a id="sharedLink" target="_blank" href="#" style="color: #00bfae;"></a>
+            </div>
         </div>
+      
+        <div id="resumeContainer" class="hidden"><div id="editForm">
+            <label for="editName">Name:</label>
+            <input type="text" id="editName">
+            
+            <label for="editEmail">Email:</label>
+            <input type="email" id="editEmail">
 
-        <div id="sharedLinkContainer" class="shared-link">
-            <p>Shareable Link: <a href="#" id="sharedLink"></a></p>
+            <label for="editPhone">Phone:</label>
+            <input type="phone" id="editPhone">
+            
+            <label for="editEducation">Education:</label>
+            <textarea id="editEducation"></textarea>
+            
+            <label for="editSkills">Skills:</label>
+            <textarea id="editSkills"></textarea>
+            <label for="editWorkExperience">Work Experience:</label>
+            <textarea id="editWorkExperience"></textarea>
+            
+            <label for="editProjects">Projects:</label>
+            <textarea id="editProjects"></textarea>
+        
+            <label for="editContact">Contact:</label>
+            <textarea id="editContact"></textarea>
+
+            <label for="editImage">Profile Picture:</label>
+            <input type="file" id="editImage" accept="image/*"> 
+            <button type="button" id="saveChanges" onclick="saveChanges()">Save Changes</button>
+            <button type="button" id="cancelEdit">Cancel</button>
         </div>
+</div>
     </div>
-    <script src="app.js" type="module"></script>
+    <script src="app.js"></script>
+
 </body>
-</html>  
+</html>

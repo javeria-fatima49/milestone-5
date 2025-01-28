@@ -1,137 +1,317 @@
- body {
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    background-color: #f5f5f5;
-    margin: 0;
-    padding: 20px;
-}
-.container {
-    max-width: 900px;
-    margin: 0 auto;
-    background-color: #90aaf2;
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 8px 120px rgba(96, 115, 255, 0.991);
-    border: 3px solid #007bff;
-}
-h1, h2 {
-    text-align: center;
+ /* body {
+    font-family: "Arial", sans-serif;
+    background-color: #f2f5f7;
     color: #333;
-}
-p {
+    text-align: center;
+    margin: 0;
+    padding: 250px;
+  }
+  
+  .container {
+    max-width: 900px;
+    margin: 50px auto;
+    background-color: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    padding: 30px;
+    min-height: 600px;
+  }
+  header {
+    background-color: #008cba;
+    color: rgb(255, 255, 255);
+    padding: 25px;
+    border-radius: 12px 12px 0 0;
+  }
+  .profile-pic {
+    width: 130px;
+    height: 130px;
+    border-radius: 70%;
+    border: 4px solid white;
+  }
+  ul {
+    list-style: none;
+  }
+  h2 {
+    color: #008cba;
+    text-align: center;
+  }
+  
+  h1 {
+    margin: 10px 0;
+    font-size: 2.5rem;
+  }
+  
+  h2 {
+    border-bottom: 3px solid #008cba;
+    padding-bottom: 5px;
+    margin-bottom: 15px;
+  }
+  
+  .form-section {
+    margin-top: 25px;
+    padding: 15px;
+    border-radius: 8px;
+    background-color: #e0f7fa;
+  }
+  .resume-section {
+    text-align: left;
+    background: #e6ffff;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    margin: 20px 0;
+} 
+  p {
     margin: 5px 0;
     color: #555;
     padding: 5px;
-}
-p[contenteditable="true"] {
+  }
+  
+  p[contenteditable="true"] {
     border: 1px dashed #ccc;
     background-color: #fff;
     padding: 5px;
     border-radius: 5px;
-}
-button {
-    padding: 10px 20px;
-    background-color: #4664da;
-    color: #ffffff;
+  }
+  
+  button {
+    padding: 12px 25px;
+    background-color: #008cba;
+    color: white;
     border: none;
-    border-radius: 4px;
+    border-radius: 5px;
     cursor: pointer;
-    font-size: 16px;
-    margin: 5px;
-}
-button:hover {
-    background-color: #354b8a;
-}
-.hidden {
+    font-size: 1rem;
+    margin-right: 10px;
+  }
+  
+  button:hover {
+    background-color: #0aa5d8;
+  }
+  
+  .hidden {
     display: none;
-}
-#shareLinks p {
-    margin: 10px 0;
-} 
-.form-section{
-    background-color: #90aaf2;
+  }
+  
+  #editForm {
+    margin-top: 25px;
     padding: 20px;
     border-radius: 8px;
-    box-shadow: 0 8px 120px rgba(96, 115, 255, 0.991);
-    border: 3px solid #007bff;
-}
-input, textarea {
+    background-color: #e0f7fa;
+  }
+  
+  #editForm label {
+    display: block;
+    margin-top: 10px;
+  }
+  
+  #editForm input,
+  #editForm textarea {
     width: 100%;
-    padding: 7px;
-    border: 1px solid #adbfc8;
-    border-radius: 2px;
-    font-size: 16px;
-    box-sizing: border-box;
-}
+    margin-top: 5px;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+   */
+  
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/* 
-body {
-    font-family: Italic;
-    background-color: #4f9ca7;
-    padding: 40px;
+   body {
+    font-family: "Arial", sans-serif;
+    background-color: #f2f5f7;
+    color: #333;
+    text-align: center;
+    margin: 0;
+    padding: 50px;
   }
   
   .container {
-    max-width: 700px;
-    margin: 0 auto;
-    padding: 70px;
-    background: #067480;
-    border-radius: 60px;
-    box-shadow: 0 0 10px rgba(167, 36, 36, 0.471);
-    text-align:corner;
+    max-width: 900px;
+    margin: 50px auto;
+    background-color: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    padding: 30px;
+    min-height: 600px;
   }
   
-  h1,h2{
-    color: rgb(75, 184, 198);
-    font-size: 3em;
-    margin-bottom: 4px;
+  header {
+    background-color: #008cba;
+    color: rgb(255, 255, 255);
+    padding: 25px;
+    border-radius: 12px 12px 0 0;
   }
   
-  .btn-generate,
-  .btn-download,
-  .btn-share {
-    display: block;
-    width: 100%;
-    padding: 10px;
-    margin: 10px 0;
-    background-color: #54779f;
-    color: rgb(43, 116, 133);
+  .profile-pic {
+    width: 130px;
+    height: 130px;
+    border-radius: 70%;
+    border: 4px solid white;
+  }
+  
+  ul {
+    list-style: none;
+  }
+  
+  h2 {
+    color: #008cba;
     text-align: center;
-    border: none;
-    border-radius: 0px;
-    cursor: pointer;
   }
   
-  .btn-share {
-    background-color: #4c75af;
+  h1 {
+    margin: 10px 0;
+    font-size: 2.5rem;
   }
-  input, textarea {
+  
+  h2 {
+    border-bottom: 3px solid #008cba;
+    padding-bottom: 5px;
+    margin-bottom: 15px;
+  }
+  
+  .form-section {
+    margin-top: 25px;
+    padding: 15px;
+    border-radius: 8px;
+    background-color: #e0f7fa;
+  }
+  
+  .resume-section {
+    text-align: left;
+    background: #e6ffff;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    margin: 20px 0;
+  }
+  
+  p {
+    margin: 5px 0;
+    color: #555;
+    padding: 5px;
+  }
+  
+  p[contenteditable="true"] {
+    border: 1px dashed #ccc;
+    background-color: #fff;
+    padding: 5px;
+    border-radius: 5px;
+  }
+  
+  button {
+    padding: 12px 25px;
+    background-color: #008cba;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    margin-right: 10px;
+    
+  }
+  
+  button:hover {
+    background-color: #0aa5d8;
+  }
+  
+  .hidden {
+    display: none;
+  }
+  
+  #editForm {
+    margin-top: 25px;
+    padding: 20px;
+    border-radius: 8px;
+    background-color: #e0f7fa;
+  }
+  
+  #editForm label {
+    display: block;
+    margin-top: 10px;
+  }
+  
+  #editForm input,
+  #editForm textarea {
     width: 100%;
-    padding: 7px;
-    border: 1px solid #adbfc8;
-    border-radius: 2px;
-    font-size: 16px;
-    box-sizing: border-box;
-}
+    margin-top: 5px;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
 
-
-.form-section {
-    color: #000000;
-    font-size: 21px;
-    margin-bottom: 10px;
-} */
+  @media screen and (max-width: 768px) {
+    body {
+      padding: 20px;
+    }
+  
+    .container {
+      padding: 20px;
+      min-height: 500px;
+    }
+  
+    .profile-pic {
+      width: 100px;
+      height: 100px;
+    }
+  
+    h1 {
+      font-size: 2rem;
+    }
+  
+    h2 {
+      font-size: 1.5rem;
+    }
+  
+    /* button {
+      width: 100%;
+      padding: 10px;
+      font-size: 1.2rem;
+    } */
+  
+    #editForm {
+      padding: 15px;
+    }
+  
+    #editForm input,
+    #editForm textarea {
+      font-size: 1rem;
+    }
+  }
+  
+  /* For mobile devices with screen width 480px and below */
+  @media screen and (max-width: 480px) {
+    h1 {
+      font-size: 1.8rem;
+    }
+  
+    h2 {
+      font-size: 1.3rem;
+    }
+  
+    .profile-pic {
+      width: 90px;
+      height: 90px;
+    }
+  
+    .container {
+      padding: 15px;
+    }
+  
+    /* button {
+      font-size: 1rem;
+      padding: 8px;
+    } */
+  
+    #editForm input,
+    #editForm textarea {
+      font-size: 0.9rem;
+    }
+  
+    .form-section {
+      margin-top: 15px;
+      padding: 12px;
+    }
+  }
+  
